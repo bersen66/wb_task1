@@ -2,6 +2,10 @@ package questions
 
 import "strings"
 
+// Разработать программу, которая проверяет, что все символы в строке
+// уникальные (true — если уникальные, false etc). Функция проверки должна быть
+// регистронезависимой.
+
 func IsUnique(src string) bool {
 	freq := make(map[rune]int)
 

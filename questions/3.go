@@ -5,6 +5,9 @@ import (
 	"sync/atomic"
 )
 
+// Дана последовательность чисел: 2,4,6,8,10. Найти сумму их
+// квадратов(22+32+42….) с использованием конкурентных вычислений.
+
 func accumulate(seq []int, page Page, accum *int64, wg *sync.WaitGroup) {
 	for i := page.Begin; i < page.End; i++ {
 		val := int64(seq[i] * seq[i])
