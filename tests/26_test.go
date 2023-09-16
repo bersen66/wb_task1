@@ -5,11 +5,18 @@ import (
 	"testing"
 )
 
+/*
+	Тесты из условия
+*/
 func Test26(t *testing.T) {
-	var src string = "Is Unq"
-
-	if questions.IsUnique(src) != true {
+	if questions.IsUnique("abcd") != true {
 		t.Fatal("Unique str treats as not unique")
+	}
+	if questions.IsUnique("abCdefAaf") != false {
+		t.Fatal("Not unique str treats as unique")
+	}
+	if questions.IsUnique("aabcd") != false {
+		t.Fatal("Not unique str treats as unique")
 	}
 }
 
