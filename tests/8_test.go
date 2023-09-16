@@ -13,7 +13,14 @@ func TestSetBit(t *testing.T) {
 	questions.SetBit(&src, 1, true)
 	assert.Equal(t, src, int64(3))
 	questions.SetBit(&src, 2, true)
+	assert.Equal(t, src, int64(7))
+
+	questions.SetBit(&src, 2, false)
 	assert.Equal(t, src, int64(3))
+	questions.SetBit(&src, 1, false)
+	assert.Equal(t, src, int64(1))
+	questions.SetBit(&src, 0, false)
+	assert.Equal(t, src, int64(0))
 }
 
 func TestInvalid(t *testing.T) {
