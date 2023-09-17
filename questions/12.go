@@ -151,7 +151,7 @@ func (s *Set) Insert(v string) bool {
 
 func (s *Set) Iterator() Iterator {
 	curr := s.root
-	for curr.left != nil {
+	for curr != nil && curr.left != nil {
 		curr = curr.left
 	}
 	return newIterator(curr)

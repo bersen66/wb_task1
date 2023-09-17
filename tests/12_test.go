@@ -2,12 +2,10 @@ package tests
 
 import (
 	"github.com/bersen66/wb_task1/questions"
-	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestInsert(t *testing.T) {
-
 	{
 		set := questions.NewSet()
 		src := []string{"cat", "cat", "dog", "cat", "tree"}
@@ -68,5 +66,4 @@ func TestInsert(t *testing.T) {
 		assert.Equal(t, set.Size(), len(exp))
 
 	}
-
 }
