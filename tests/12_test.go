@@ -2,6 +2,7 @@ package tests
 
 import (
 	"github.com/bersen66/wb_task1/questions"
+	"github.com/magiconair/properties/assert"
 	"testing"
 )
 
